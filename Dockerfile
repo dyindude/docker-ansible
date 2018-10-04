@@ -1,6 +1,6 @@
-ARG  IMAGE
+ARG  DISTRO
 ARG  TAG
-FROM $IMAGE:$TAG
+FROM $DISTRO:$TAG
 ARG  ANSIBLE_VERSION
 
 RUN apt-get update && \
@@ -13,4 +13,4 @@ ENV HOME /root
 
 WORKDIR /root
 
-CMD ["bash"]
+ENTRYPOINT ["ansible-playbook"]
