@@ -4,7 +4,7 @@ Project for building docker images of ansible in the following image/tag permuta
 ```
 ubuntu_builds=bionic xenial trusty
 debian_builds=jessie
-ansible_versions=2.5 2.6 2.7
+ansible_versions=2.6 2.7
 ```
 
 Running `make all` will generate all images, or specific targets can be made with `make ${DISTRO}_${TAG}_${ANSIBLE_VERSION}`
@@ -13,8 +13,8 @@ Running `make all` will generate all images, or specific targets can be made wit
 
 ```
 make all
-make ubuntu_bionic_2.6
-make debian_jessie_2.5
+make ubuntu_bionic_2.7
+make debian_jessie_2.6
 ```
 
 # notes

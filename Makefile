@@ -1,7 +1,7 @@
 DISTROS=ubuntu debian
 ubuntu_builds=bionic xenial trusty
 debian_builds=buster stretch jessie
-ansible_versions=2.5 2.6 2.7
+ansible_versions=2.6 2.7
 TARGETS = $(foreach d,$(DISTROS), \
 	$(foreach b,$($(d)_builds), \
 	$(foreach v,$(ansible_versions), \
