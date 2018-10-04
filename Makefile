@@ -15,4 +15,9 @@ ${TARGETS}:
 	DISTRO=$$(echo $@ | cut -d "_" -f 1) ; \
 	TAG=$$(echo $@ | cut -d "_" -f 2) ; \
 	ANSIBLE_VERSION=$$(echo $@ | cut -d "_" -f 3) ; \
-	docker build --build-arg APT_CACHE_PROXY_HOST=$$APT_CACHE_PROXY_HOST --build-arg DISTRO=$$DISTRO --build-arg TAG=$$TAG --build-arg ANSIBLE_VERSION=$$ANSIBLE_VERSION -t dyindude/ansible:$$DISTRO\_$$TAG\_ansible$$ANSIBLE_VERSION .
+	docker build \
+		--build-arg APT_CACHE_PROXY_HOST=$$APT_CACHE_PROXY_HOST \
+		--build-arg DISTRO=$$DISTRO \
+		--build-arg TAG=$$TAG \
+		--build-arg ANSIBLE_VERSION=$$ANSIBLE_VERSION \
+		-t dyindude/ansible:$$DISTRO\_$$TAG\_ansible$$ANSIBLE_VERSION .
