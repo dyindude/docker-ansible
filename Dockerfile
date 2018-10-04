@@ -12,7 +12,9 @@ RUN apt-get update && \
     apt-get -y dist-upgrade && \
     apt-get -y install \
       python3 \
-      python3-pip && \
+      python3-pip \
+      libssl-dev \
+      libffi-dev && \
     pip3 install --upgrade pip ansible==${ANSIBLE_VERSION}.* && \
     rm -rf /var/lib/apt/lists/*
 
